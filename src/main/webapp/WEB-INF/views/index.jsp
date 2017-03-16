@@ -9,6 +9,8 @@
           <a href="<c:url value='/pessoa'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Listar Pessoa</a>
           <a href="<c:url value='/endereco/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Listar Endereco</a>
           <a href="<c:url value='/endereco'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Cadastrar Endereco</a>
+          <a href="<c:url value='/telefone/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Listar Telefone</a>
+          <a href="<c:url value='/telefone'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Cadastrar Telefone</a>          
         </div>
     </div>
   </div>
