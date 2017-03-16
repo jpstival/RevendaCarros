@@ -1,5 +1,7 @@
 package br.com.posgraduacao.revendacarros.models;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,7 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Pessoa {
+@AttributeOverride(name="version", column=@Column(name="versao"))
+public class Pessoa extends BaseEntity<Integer> {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,11 +30,7 @@ public class Pessoa {
 
 
 	public Integer getId() {
-		return this.id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
+		return id;
 	}
 
 	public String getNome() {

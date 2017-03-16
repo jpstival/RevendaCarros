@@ -16,7 +16,7 @@ public class Venda {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	private Pessoa pessoa;
+//	private Pessoa pessoa;
 
 	private Double preco;
 
@@ -31,13 +31,13 @@ public class Venda {
 		this.id = id;
 	}
 
-	public Pessoa getPessoa() {
-		return pessoa;
-	}
-
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
-	}
+//	public Pessoa getPessoa() {
+//		return pessoa;
+//	}
+//
+//	public void setPessoa(Pessoa pessoa) {
+//		this.pessoa = pessoa;
+//	}
 
 	public Double getPreco() {
 		return preco;
