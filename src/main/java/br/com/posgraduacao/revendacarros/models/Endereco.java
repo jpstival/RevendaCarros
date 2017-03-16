@@ -1,15 +1,12 @@
 package br.com.posgraduacao.revendacarros.models;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "endereco")
 public class Endereco {
 
 	@Id
@@ -30,7 +27,7 @@ public class Endereco {
 	
 	@Column(name = "estado", nullable = false, length = 15)
 	private String estado;
-
+	
 	public Integer getId() {
 		return id;
 	}

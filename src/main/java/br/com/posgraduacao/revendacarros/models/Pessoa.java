@@ -23,6 +23,7 @@ public class Pessoa {
 	private SexoPessoa sexo;
 	private String email;
 
+
 	public Integer getId() {
 		return this.id;
 	}
@@ -62,5 +63,5 @@ public class Pessoa {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 }
