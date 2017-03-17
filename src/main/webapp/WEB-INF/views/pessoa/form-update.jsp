@@ -9,7 +9,7 @@
 		
 		<%@include file="form-inputs.jsp" %>
         <button type="submit" class="btn btn-primary">Submit</button>
-
+		<a href="<c:url value='/pessoa/endereco/${pessoa.id}'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Endereço Pessoa</a>
       </form:form>	
     </div>
   </div>

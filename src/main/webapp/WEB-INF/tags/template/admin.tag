@@ -31,16 +31,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Project Name</a>
+        <a class="navbar-brand" href="index.html">Revenda Carros</a>
       </div>
 
       <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
             <ul class="dropdown-menu">
-	            	              <li><a href="<c:url value='/pessoa/form'/>"><span class="glyphicon glyphicon-plus-sign"></span> Add pessoa</a></li>	              
-	              <li><a href="<c:url value='/pessoa'/>"><span class="glyphicon glyphicon-menu-hamburger"></span> List pessoa</a></li>
+	              <li><a href="<c:url value='/pessoa/form'/>"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Pessoa</a></li>	              
+	              <li><a href="<c:url value='/pessoa'/>"><span class="glyphicon glyphicon-menu-hamburger"></span> Listar Pessoas</a></li>
 				  <li role="separator" class="divider"></li>
             </ul>
           </li>

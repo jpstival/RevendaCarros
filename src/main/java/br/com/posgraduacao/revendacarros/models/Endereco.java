@@ -1,52 +1,27 @@
 package br.com.posgraduacao.revendacarros.models;
 
-import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.Embeddable;
 
-@Entity
-@AttributeOverride(name="version", column=@Column(name="versao"))
-public class Endereco extends BaseEntity<Integer> {
 
-	private static final long serialVersionUID = 1L;
+@Embeddable
+public class Endereco  {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
-	@Column(name = "cep", nullable = false, length = 9)
+	@Column(name = "cep", length = 9)
 	private String cep;
 
-	@Column(name = "rua", nullable = false, length = 30)
+	@Column(name = "rua", length = 30)
 	private String rua;
 
-	@Column(name = "bairro", nullable = false, length = 20)
+	@Column(name = "bairro", length = 20)
 	private String bairro;
 	
-	@Column(name = "cidade", nullable = false, length = 20)
+	@Column(name = "cidade", length = 20)
 	private String cidade;
 	
-	@Column(name = "estado", nullable = false, length = 15)
+	@Column(name = "estado", length = 15)
 	private String estado;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_pessoa", referencedColumnName = "id", nullable = false, insertable = true, updatable = false)
-	private Pessoa pessoa;
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public String getRua() {
 		return rua;
 	}
@@ -86,14 +61,5 @@ public class Endereco extends BaseEntity<Integer> {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-
-	public Pessoa getPessoa() {
-		return pessoa;
-	}
-
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
-	}
-	
 	
 }
