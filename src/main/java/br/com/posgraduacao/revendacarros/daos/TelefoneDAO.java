@@ -7,8 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.posgraduacao.revendacarros.models.Telefone;
-import br.com.posgraduacao.revendacarros.models.PaginatedList;
+import br.com.posgraduacao.revendacarros.models.*;
 
 @Repository
 public class TelefoneDAO {
