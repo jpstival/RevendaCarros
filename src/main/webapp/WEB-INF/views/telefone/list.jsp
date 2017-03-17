@@ -15,10 +15,10 @@
           <table class="table table-condensed table-bordered table-striped table-hover">
           		  <thead>
 	                  <tr>
-	                  	<td>id</td>
-		                  	<td>tipo</td>
-		                  	<td>ddd</td>
-		                  	<td>numero</td>
+	                  	<td>Id</td>
+		                  	<td>Tipo</td>
+		                  	<td>DDD</td>
+		                  	<td>Número</td>
 						<td>actions</td>
 	                  </tr>
                   </thead>
@@ -29,7 +29,7 @@
 		                  	<td>${object.tipo}</td>
 		                  	<td>${object.ddd}</td>
 		                  	<td>${object.numero}</td>
-	                    <td><a href="<c:url value='/pessoa/remove'/>/${object.id}">Remove</a></td>
+	                    <td><a href="<c:url value='/telefone/remove'/>/${object.id}">Remove</a></td>
 					  </tr>
                   </c:forEach>
                   </tbody>
