@@ -71,7 +71,7 @@ public class PessoaController
    @RequestMapping(method = RequestMethod.POST, value = "/{id}")
    public ModelAndView update(@PathVariable("id") Integer id, @Valid Pessoa pessoa, BindingResult bindingResult)
    {
-      //pessoa.setId(id);
+      pessoa.setId(id);
       if (bindingResult.hasErrors())
       {
          return new ModelAndView("pessoa/form-update");

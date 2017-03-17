@@ -10,7 +10,7 @@
 <jsp:body>
   <div>
     <div class ="container min-container">
-      <h2 class="basic-title">Endereco</h2>
+      <h2 class="basic-title">Enderecos</h2>
         <div class="well">
           <table class="table table-condensed table-bordered table-striped table-hover">
           		  <thead>
@@ -19,6 +19,8 @@
 		                  	<td>cep</td>
 		                  	<td>rua</td>
 		                  	<td>bairro</td>
+		                  	<td>cidade</td>
+		                  	<td>estado</td>
 						<td>actions</td>
 	                  </tr>
                   </thead>
@@ -29,13 +31,15 @@
 		                  	<td>${object.cep}</td>
 		                  	<td>${object.rua}</td>
 		                  	<td>${object.bairro}</td>
+		                  	<td>${object.cidade}</td>
+		                  	<td>${object.estado}</td>           	
 	                    <td><a href="<c:url value='/endereco/remove'/>/${object.id}">Remove</a></td>
 					  </tr>
                   </c:forEach>
                   </tbody>
           </table>
 		  <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/endereco"/>
-          <a href="<c:url value='/endereco/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Nova Pessoa</a>
+          <a href="<c:url value='/endereco/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Novo Endereço</a>
         </div>
     </div>
   </div>

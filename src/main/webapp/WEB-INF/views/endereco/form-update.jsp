@@ -4,7 +4,7 @@
 <template:admin>
   <div>
     <div class ="container min-container">      
-    <h2 class="basic-title">Atualizar dados da pessoa</h2>
+    <h2 class="basic-title">Atualizar dados do endereço</h2>
       <form:form role="form" cssClass="well" commandName="endereco" servletRelativeAction="/endereco/${endereco.id}" method="POST">
 		
 		<%@include file="form-inputs.jsp" %>
