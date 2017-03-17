@@ -86,7 +86,7 @@ public class PessoaController
       pessoa.setId(id);
       if (bindingResult.hasErrors())
       {
-         return new ModelAndView("pessoa/form-update");
+         return new ModelAndView("endereco/form-update");
       }
       pessoaDao.update(pessoa);
       return new ModelAndView("redirect:/pessoa");
