@@ -19,13 +19,17 @@ public class Pessoa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(nullable = false, length = 50)
-	private String nome;
+	
 	@Column(nullable = false, length = 11)
 	private String cpf;
+	
+	@Column(nullable = false, length = 50)
+	private String nome;
+
 	@Enumerated(EnumType.ORDINAL)
 	@Column(length = 1)
 	private SexoPessoa sexo;
+	
 	private String email;
 
 	@Embedded

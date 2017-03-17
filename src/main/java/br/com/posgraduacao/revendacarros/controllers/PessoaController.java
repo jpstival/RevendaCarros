@@ -80,16 +80,4 @@ public class PessoaController
       return new ModelAndView("redirect:/pessoa");
    }
    
-   @RequestMapping(method = RequestMethod.POST, value = "/endereco/{id}")
-   public ModelAndView endereco(@PathVariable("id") Integer id, @Valid Pessoa pessoa, BindingResult bindingResult)
-   {
-      pessoa.setId(id);
-      if (bindingResult.hasErrors())
-      {
-         return new ModelAndView("endereco/form-update");
-      }
-      pessoaDao.update(pessoa);
-      return new ModelAndView("redirect:/pessoa");
-   }
-   
 }
