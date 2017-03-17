@@ -10,16 +10,16 @@ public class Endereco  {
 	@Column(name = "cep", length = 9)
 	private String cep;
 
-	@Column(name = "rua", length = 30)
+	@Column(name = "rua", length = 45)
 	private String rua;
 
-	@Column(name = "bairro", length = 20)
+	@Column(name = "bairro", length = 45)
 	private String bairro;
 	
-	@Column(name = "cidade", length = 20)
+	@Column(name = "cidade", length = 40)
 	private String cidade;
 	
-	@Column(name = "estado", length = 15)
+	@Column(name = "estado", length = 30)
 	private String estado;
 	
 	public String getRua() {

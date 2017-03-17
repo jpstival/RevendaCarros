@@ -11,6 +11,7 @@ import br.com.posgraduacao.revendacarros.models.*;
 
 
 @Repository
+
 public class CarroDAO {
 	@PersistenceContext
 	private EntityManager manager;
