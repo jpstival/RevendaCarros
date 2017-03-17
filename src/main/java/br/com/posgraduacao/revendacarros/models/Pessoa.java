@@ -3,6 +3,7 @@ package br.com.posgraduacao.revendacarros.models;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -12,7 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@SuppressWarnings("unused")
 @Entity
 public class Pessoa {
 
@@ -28,8 +28,11 @@ public class Pessoa {
 	private SexoPessoa sexo;
 	private String email;
 
+	@Embedded
+	private Endereco endereco;
+	
 	@OneToMany(mappedBy = "pessoa", fetch = FetchType.LAZY)
-	private List<Endereco> enderecos;
+	private List<Telefone> telefones;
 	public Integer getId() {
 		return id;
 	}
@@ -70,8 +73,20 @@ public class Pessoa {
 		this.email = email;
 	}
 
-	public List<Endereco> getTelefones() {
-		return enderecos;
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
 	}
 
 }

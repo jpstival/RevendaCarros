@@ -16,8 +16,6 @@ public class Venda {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-//	private Pessoa pessoa;
-
 	private Double preco;
 
 	@Temporal(TemporalType.DATE)
@@ -30,14 +28,6 @@ public class Venda {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-//	public Pessoa getPessoa() {
-//		return pessoa;
-//	}
-//
-//	public void setPessoa(Pessoa pessoa) {
-//		this.pessoa = pessoa;
-//	}
 
 	public Double getPreco() {
 		return preco;
