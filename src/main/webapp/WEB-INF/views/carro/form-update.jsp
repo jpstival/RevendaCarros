@@ -4,8 +4,8 @@
 <template:admin>
   <div>
     <div class ="container min-container">      
-    <h2 class="basic-title">Atualizar dados do endereço</h2>
-      <form:form role="form" cssClass="well" commandName="endereco" servletRelativeAction="/endereco/${endereco.id}" method="POST">
+    <h2 class="basic-title">Atualizar dados do carro</h2>
+      <form:form role="form" cssClass="well" commandName="carro" servletRelativeAction="/carro/${carro.id}" method="POST">
 		
 		<%@include file="form-inputs.jsp" %>
         <button type="submit" class="btn btn-primary">Submit</button>

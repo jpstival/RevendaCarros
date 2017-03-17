@@ -1,13 +1,18 @@
 package br.com.posgraduacao.revendacarros.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+@SuppressWarnings("unused")
 @Entity
 public class Pessoa {
 
@@ -23,15 +28,16 @@ public class Pessoa {
 	private SexoPessoa sexo;
 	private String email;
 
-
+	@OneToMany(mappedBy = "pessoa", fetch = FetchType.LAZY)
+	private List<Endereco> enderecos;
 	public Integer getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+	
 	public String getNome() {
 		return this.nome;
 	}
@@ -62,6 +68,10 @@ public class Pessoa {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public List<Endereco> getTelefones() {
+		return enderecos;
 	}
 
 }

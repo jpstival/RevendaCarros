@@ -1,17 +1,25 @@
 package br.com.posgraduacao.revendacarros.models;
 
+import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "telefone")
-public class Telefone {
+@AttributeOverride(name="version", column=@Column(name="versao"))
+public class Telefone extends BaseEntity<Integer>{
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -26,6 +34,10 @@ public class Telefone {
 	@Column(name = "numero", nullable = false, length = 9)
 	private Integer numero;
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_pessoa", referencedColumnName = "id", nullable = false, insertable = true, updatable = false)
+	private Pessoa pessoa;
+	
 	public Integer getId() {
 		return id;
 	}
