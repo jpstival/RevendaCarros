@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@SuppressWarnings("unused")
 @Entity
 @AttributeOverride(name="version", column=@Column(name="versao"))
 public class Pessoa extends BaseEntity<Integer> {

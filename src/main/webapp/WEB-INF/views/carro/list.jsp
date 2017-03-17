@@ -10,33 +10,34 @@
 <jsp:body>
   <div>
     <div class ="container min-container">
-      <h2 class="basic-title">Pessoas</h2>
+      <h2 class="basic-title">Carros</h2>
         <div class="well">
           <table class="table table-condensed table-bordered table-striped table-hover">
           		  <thead>
 	                  <tr>
 	                  	<td>id</td>
-		                  	<td>nome</td>
-		                  	<td>cpf</td>
-		                  	<td>sexo</td>
+		                  	<td>Marca</td>
+		                  	<td>Modelo</td>
+		                  	<td>Ano</td>
+		                    <td>Cor</td>
 						<td>actions</td>
 	                  </tr>
                   </thead>
                   <tbody>
                   <c:forEach items='${paginatedList.currentList}' var='object'>         		
 	                  <tr>
-						<td><a href="<c:url value='/pessoa'/>/${object.id}">${object.id}</a></td>
-		                  	<td>${object.nome}</td>
-		                  	<td>${object.cpf}</td>
-		                  	<td>${object.sexo}</td>
-		                  	<br>
+						<td><a href="<c:url value='/telefone'/>/${object.id}">${object.id}</a></td>
+		                  	<td>${object.marca}</td>
+		                  	<td>${object.modelo}</td>
+		                  	<td>${object.ano}</td>
+		                  	<td>${object.cor}</td>
 	                    <td><a href="<c:url value='/pessoa/remove'/>/${object.id}">Remove</a></td>
 					  </tr>
                   </c:forEach>
                   </tbody>
           </table>
-		  <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/pessoa"/>
-          <a href="<c:url value='/pessoa/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Nova Pessoa</a>
+		  <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/telefone"/>
+          <a href="<c:url value='/telefone/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Novo Carro</a>
         </div>
     </div>
   </div>

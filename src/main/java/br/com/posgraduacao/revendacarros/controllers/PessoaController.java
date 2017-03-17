@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.posgraduacao.revendacarros.daos.PessoaDao;
-import br.com.posgraduacao.revendacarros.models.Pessoa;
+import br.com.posgraduacao.revendacarros.models.*;
 
 @Controller
 @RequestMapping("/pessoa")
