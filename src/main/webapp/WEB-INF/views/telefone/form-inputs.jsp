@@ -1,7 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div class="form-group">
-	<label for="tipo">tipo</label>
+	<label for="tipo">Tipo</label>
 	<div class="input-group">
 		<span class="input-group-addon"><i
 			class="glyphicon glyphicon-unchecked"></i></span>
@@ -13,7 +13,7 @@
 	</div>
 </div>
 <div class="form-group">
-	<label for="ddd">ddd</label>
+	<label for="ddd">DDD</label>
 	<div class="input-group">
 		<span class="input-group-addon"><i
 			class="glyphicon glyphicon-unchecked"></i></span>
@@ -23,7 +23,7 @@
 	</div>
 </div>
 <div class="form-group">
-	<label for="numero">numero</label>
+	<label for="numero">Número</label>
 	<div class="input-group">
 		<span class="input-group-addon"><i
 			class="glyphicon glyphicon-unchecked"></i></span>

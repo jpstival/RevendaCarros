@@ -26,18 +26,18 @@
                   <tbody>
                   <c:forEach items='${paginatedList.currentList}' var='object'>         		
 	                  <tr>
-						<td><a href="<c:url value='/telefone'/>/${object.id}">${object.id}</a></td>
+						<td><a href="<c:url value='/carro'/>/${object.id}">${object.id}</a></td>
 		                  	<td>${object.marca}</td>
 		                  	<td>${object.modelo}</td>
 		                  	<td>${object.ano}</td>
 		                  	<td>${object.cor}</td>
-	                    <td><a href="<c:url value='/pessoa/remove'/>/${object.id}">Remove</a></td>
+	                    <td><a href="<c:url value='/carro/remove'/>/${object.id}">Remove</a></td>
 					  </tr>
                   </c:forEach>
                   </tbody>
           </table>
 		  <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/telefone"/>
-          <a href="<c:url value='/telefone/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Novo Carro</a>
+          <a href="<c:url value='/carro/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Novo Carro</a>
         </div>
     </div>
   </div>
