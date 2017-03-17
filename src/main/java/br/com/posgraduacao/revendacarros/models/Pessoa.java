@@ -30,9 +30,21 @@ public class Pessoa {
 
 	@Embedded
 	private Endereco endereco;
-	
+
+	@OneToMany(mappedBy = "pessoa")
+	private List<Venda> vendas;
+
+	public List<Venda> getVendas() {
+		return vendas;
+	}
+
+	public void setVendas(List<Venda> vendas) {
+		this.vendas = vendas;
+	}
+
 	@OneToMany(mappedBy = "pessoa", fetch = FetchType.LAZY)
 	private List<Telefone> telefones;
+
 	public Integer getId() {
 		return id;
 	}
@@ -40,7 +52,7 @@ public class Pessoa {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	public String getNome() {
 		return this.nome;
 	}
