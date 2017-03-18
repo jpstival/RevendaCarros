@@ -10,15 +10,14 @@
 <jsp:body>
   <div>
     <div class ="container min-container">
-      <h2 class="basic-title">Pessoas</h2>
+      <h2 class="basic-title">Vendas</h2>
         <div class="well">
           <table class="table table-condensed table-bordered table-striped table-hover">
           		  <thead>
 	                  <tr>
 	                  	<td>id</td>
-		                  	<td>nome</td>
-		                  	<td>cpf</td>
-		                  	<td>sexo</td>
+		                  	<td>comprador</td>
+		                  	<td>preco</td>
 						<td>actions</td>
 	                  </tr>
                   </thead>
@@ -26,9 +25,8 @@
                   <c:forEach items='${paginatedList.currentList}' var='object'>         		
 	                  <tr>
 						<td><a href="<c:url value='/pessoa'/>/${object.id}">${object.id}</a></td>
-		                  	<td>${object.nome}</td>
-		                  	<td>${object.cpf}</td>
-		                  	<td>${object.sexo}</td>
+		                  	<td>${object.comprador}</td>
+		                  	<td>${object.preco}</td>
 		                  	<br>
 	                    <td><a href="<c:url value='/pessoa/remove'/>/${object.id}">Remove</a></td>
 					  </tr>
@@ -36,8 +34,8 @@
                   </tbody>
           </table>
 		  
-          <a href="<c:url value='/pessoa/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Nova Pessoa</a>
-          <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/pessoa"/>
+          <a href="<c:url value='/venda/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Nova Pessoa</a>
+          <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/venda"/>
         </div>
     </div>
   </div>

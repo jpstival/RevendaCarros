@@ -70,5 +70,15 @@ public class Telefone extends BaseEntity<Integer>{
 	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+	
+	
 }
 

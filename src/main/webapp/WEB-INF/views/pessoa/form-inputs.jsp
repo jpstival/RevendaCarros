@@ -5,17 +5,17 @@
 	<div class="input-group">
 		<span class="input-group-addon"><i
 			class="glyphicon glyphicon-unchecked"></i></span>
-		<form:input path='nome' type='text' />
+		<form:input path='nome' type='text' style="height: 30px; width: 300px;"/>
 		<form:errors path='nome' />
 
 	</div>
 </div>
-<div class="form-group">
+<div class="form-group" >
 	<label for="cpf">cpf</label>
-	<div class="input-group">
-		<span class="input-group-addon"><i
-			class="glyphicon glyphicon-unchecked"></i></span>
-		<form:input path='cpf' type='text' />
+	<div class="input-group" >
+		<span class="input-group-addon" ><i
+			class="glyphicon glyphicon-unchecked" ></i></span>
+		<form:input path='cpf' type='text' style="height: 30px; width: 300px;"/>
 		<form:errors path='cpf' />
 
 	</div>
@@ -25,7 +25,7 @@
 	<div class="input-group">
 		<span class="input-group-addon"><i
 			class="glyphicon glyphicon-unchecked"></i></span>
-		<form:select path='sexo'>
+		<form:select path='sexo' style="height: 30px; width: 300px;">
 			<form:options items="${sexo}" />
 		</form:select>
 		<form:errors path='sexo' />
@@ -37,7 +37,7 @@
 	<div class="input-group">
 		<span class="input-group-addon"><i
 			class="glyphicon glyphicon-unchecked"></i></span>
-		<form:input path='email' type='text' />
+		<form:input path='email' type='text' style="height: 30px; width: 300px;"/>
 		<form:errors path='email' />
 	</div>
 </div>

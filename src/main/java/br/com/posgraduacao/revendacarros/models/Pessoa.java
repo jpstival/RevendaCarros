@@ -38,14 +38,6 @@ public class Pessoa {
 	@OneToMany(mappedBy = "pessoa")
 	private List<Venda> vendas;
 
-	public List<Venda> getVendas() {
-		return vendas;
-	}
-
-	public void setVendas(List<Venda> vendas) {
-		this.vendas = vendas;
-	}
-
 	@OneToMany(mappedBy = "pessoa", fetch = FetchType.LAZY)
 	private List<Telefone> telefones;
 
@@ -103,6 +95,14 @@ public class Pessoa {
 
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
+	}
+
+	public List<Venda> getVendas() {
+		return vendas;
+	}
+
+	public void setVendas(List<Venda> vendas) {
+		this.vendas = vendas;
 	}
 
 }

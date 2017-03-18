@@ -38,4 +38,14 @@
 
 	</div>
 </div>
+<div class="form-group">
+	<label for="placa">placa</label>
+	<div class="input-group">
+		<span class="input-group-addon"><i
+			class="glyphicon glyphicon-unchecked"></i></span>
+		<form:input path='placa' type='text' />
+		<form:errors path='placa' />
+
+	</div>
+</div>
 

@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "carro")
 public class Carro {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -26,6 +28,13 @@ public class Carro {
 
 	@Column(name = "cor", nullable = false, length = 30)
 	private String cor;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_venda", referencedColumnName = "id_venda")
+	private Venda venda;
+	
+	@Column
+	private String placa;
 
 	public Integer getId() {
 		return id;
@@ -65,6 +74,22 @@ public class Carro {
 
 	public void setCor(String cor) {
 		this.cor = cor;
+	}
+
+	public String getPlaca() {
+		return placa;
+	}
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVenda(Venda venda) {
+		this.venda = venda;
 	}
 
 }
